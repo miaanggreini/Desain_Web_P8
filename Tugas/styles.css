@@ -1,0 +1,150 @@
+/* Reset default browser styling */
+body {
+  margin: 0; /* Menghilangkan margin bawaan browser */
+  font-family: Arial, sans-serif; /* Mengatur font default halaman */
+  background-color: #f4f4f4; /* Warna latar belakang halaman */
+}
+
+/* Header */
+.header {
+  background-color: #333; /* Warna background header */
+  height: 100px; /* Tinggi header */
+  display: flex; /* Menggunakan flexbox untuk menyusun elemen di dalamnya */
+  align-items: center; /* Vertikal: Posisi elemen di tengah 
+                          Pilihan lain: 
+                          - flex-start: Elemen di atas
+                          - flex-end: Elemen di bawah */
+  justify-content: center; /* Horizontal: Posisi elemen di tengah 
+                              Pilihan lain: 
+                              - flex-start: Elemen ke kiri
+                              - flex-end: Elemen ke kanan 
+                              - space-between: Jarak antar elemen merata */
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2); /* Menambahkan efek bayangan */
+}
+
+.logo {
+  background-color: #555; /* Warna latar belakang logo */
+  color: white; /* Warna teks logo */
+  width: 100px; /* Lebar logo */
+  height: 50px; /* Tinggi logo */
+  display: flex; /* Menggunakan flexbox untuk menyusun elemen di dalamnya */
+  align-items: center; /* Vertikal: Posisi teks di tengah logo 
+                          Pilihan lain:
+                          - flex-start: Teks di atas
+                          - flex-end: Teks di bawah */
+  justify-content: center; /* Horizontal: Posisi teks di tengah logo 
+                              Pilihan lain:
+                              - flex-start: Teks di kiri
+                              - flex-end: Teks di kanan */
+  border-radius: 25px; /* Membuat sudut melengkung seperti oval 
+                          Pilihan lain:
+                          - 0px: Kotak tanpa lengkungan
+                          - 10px: Lengkungan kecil */
+  font-size: 18px; /* Ukuran teks logo */
+}
+
+/* Struktur Layout */
+.container {
+  display: flex; /* Membuat layout fleksibel untuk sidebar dan konten 
+                    Pilihan lain:
+                    - grid: Untuk layout berbasis grid */
+  margin-top: 10px; /* Memberikan jarak antara header dan isi halaman */
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px; /* Lebar sidebar */
+  background-color: #333; /* Warna latar belakang sidebar */
+  color: white; /* Warna teks sidebar */
+  padding-top: 20px; /* Jarak isi sidebar dari atas 
+                        Pilihan lain:
+                        - padding: 0; Tanpa jarak */
+  box-sizing: border-box; /* Memasukkan padding ke dalam lebar elemen */
+  height: calc(
+    100vh - 100px
+  ); /* Tinggi sidebar = tinggi layar - tinggi header */
+  position: sticky; /* Membuat sidebar tetap terlihat saat di-scroll 
+                       Pilihan lain:
+                       - fixed: Sidebar tetap di posisi tertentu */
+  top: 100px; /* Posisi sidebar di bawah header */
+}
+
+.nav {
+  list-style: none; /* Menghilangkan bullet pada daftar 
+                       Pilihan lain:
+                       - circle: Bullet berbentuk lingkaran
+                       - square: Bullet berbentuk kotak */
+  padding: 0; /* Menghapus padding default pada daftar */
+  margin: 0; /* Menghapus margin default pada daftar */
+}
+
+.nav li {
+  margin: 10px 0; /* Memberikan jarak antar elemen daftar 
+                     Pilihan lain:
+                     - margin: 5px 0; Jarak lebih kecil */
+}
+
+.nav li a {
+  text-decoration: none; /* Menghapus garis bawah pada link 
+                            Pilihan lain:
+                            - underline: Menambahkan garis bawah */
+  color: white; /* Warna teks link 
+                   Pilihan lain:
+                   - #000: Teks warna hitam */
+  padding: 10px; /* Jarak di dalam elemen link 
+                    Pilihan lain:
+                    - padding: 5px; Jarak lebih kecil */
+  display: block; /* Membuat elemen link memenuhi lebar container 
+                     Pilihan lain:
+                     - inline-block: Hanya selebar kontennya */
+  text-align: center; /* Menengahkan teks dalam link 
+                         Pilihan lain:
+                         - left: Rata kiri
+                         - right: Rata kanan */
+  background-color: #444; /* Warna background default link */
+  border-radius: 5px; /* Membuat sudut link menjadi melengkung 
+                         Pilihan lain:
+                         - 0px: Tidak melengkung */
+}
+
+.nav li a:hover {
+  background-color: #555; /* Mengubah warna background saat link di-hover 
+                             Pilihan lain:
+                             - #666: Warna lebih terang */
+}
+
+/* Konten */
+.content {
+  flex-grow: 1; /* Membuat konten menyesuaikan sisa ruang di sebelah sidebar */
+  padding: 20px; /* Memberikan jarak di dalam elemen konten */
+  background-color: #fff; /* Warna latar belakang konten */
+  box-sizing: border-box; /* Memasukkan padding ke dalam lebar elemen */
+  height: calc(
+    100vh - 100px
+  ); /* Tinggi konten = tinggi layar - tinggi header */
+  overflow-y: auto; /* Menambahkan scroll vertikal jika konten terlalu panjang 
+                       Pilihan lain:
+                       - hidden: Menghilangkan scroll */
+}
+
+/* Footer */
+.footer {
+  background-color: #222; /* Warna latar belakang footer */
+  color: white; /* Warna teks footer */
+  text-align: center; /* Teks rata tengah 
+                         Pilihan lain:
+                         - left: Rata kiri
+                         - right: Rata kanan */
+  padding: 15px; /* Memberikan jarak di dalam elemen footer */
+  position: relative; /* Membuat footer tetap di bagian bawah halaman 
+                         Pilihan lain:
+                         - fixed: Tetap di bawah layar */
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2); /* Efek bayangan atas pada footer */
+}
+
+.footer p {
+  margin: 0; /* Menghapus margin pada teks di dalam footer */
+  font-size: 14px; /* Ukuran teks footer 
+                      Pilihan lain:
+                      - 16px: Ukuran teks lebih besar */
+}
