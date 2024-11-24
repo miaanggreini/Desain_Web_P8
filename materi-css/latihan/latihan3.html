@@ -7,24 +7,50 @@
     <link rel="stylesheet" href="../style.css" />
     <style>
       /* Gaya khusus untuk bar navigasi */
+      body {
+        background-color: #ffffff;
+      }
       .navbar {
         display: flex; /* Membuat elemen dalam bar navigasi berbaris horizontal */
-        justify-content: space-around; /* Memberi jarak yang merata antar elemen */
+        /* inline-flex kotak navbar secukupnya, flex mentok sampai kanan */
+        /* grid untuk navbar ke bawah (vertikal), full sampai kanan */
+        /* inline-grid untuk menyesuaikan ke kanan  */
+        justify-content: center; /* flex Memberi jarak yang merata antar elemen */
+        /*  flex-end untuk Memberi jarak yang ke kanan elemen */
+        /*  flex-start untuk Memberi jarak yang ke kiri elemen */
+        /*  space-between untuk Memberi jarak yang sama antar elemen ujung ke ujung mepet bagian container */
+        /*  center untuk Memberi jarak kanan kiri sama */
         align-items: center; /* Pusatkan elemen secara vertikal */
-        background-color: #444; /* Warna latar belakang bar navigasi */
-        padding: 10px; /* Spasi dalam bar */
+        background-color: #3ab9cf; /* Warna latar belakang bar navigasi */
+        padding: 2px; /* Spasi dalam bar */
         border-radius: 8px; /* Membuat sudut membulat */
       }
+      h2{
+        color: #3ab9cf;
+      }
+      header {
+        color: #ffffff;
+        background-color: #3ab9cf;
+        border-radius: 10px;
+      }
       .navbar a {
-        color: #ffd700; /* Warna teks emas */
-        text-decoration: none; /* Menghilangkan garis bawah */
-        font-size: 1.2rem; /* Ukuran font lebih besar */
-        padding: 10px 15px; /* Spasi dalam setiap link */
-        transition: background-color 0.3s ease; /* Animasi saat di-hover */
+        color: #fafafa; /* Warna teks emas */
+        text-decoration: underline; /* Menghilangkan garis bawah */
+        /* overline garis diatas */
+        /* underline garis bawah */
+        /* line-through garis melintang di tengah */
+        font-size: 20px; /* Ukuran font lebih besar */
+        padding: 20px 20px; /* Spasi dalam setiap link */
+        /* padding pertama untuk Spasi terhadap border */
+        /* padding kedua untuk Spasi antar navbar*/
+        transition: background-color 2s ease; /* Animasi saat di-hover */
       }
       .navbar a:hover {
-        background-color: #555; /* Warna latar belakang saat di-hover */
+        background-color: #1c50ec; /* Warna latar belakang saat di-hover */
         border-radius: 4px; /* Membuat sudut membulat saat di-hover */
+      }
+      p{
+        color: #3ab9cf;
       }
     </style>
   </head>

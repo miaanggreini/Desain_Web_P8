@@ -6,42 +6,66 @@ body {
 }
 
 /* Header */
+/* Header untuk mengatur tata letak logo dan paragraf */
+/* Header untuk tata letak logo dan paragraf */
+/* Header untuk mengatur tata letak logo dan paragraf */
 .header {
-  background-color: #333; /* Warna background header */
-  height: 100px; /* Tinggi header */
-  display: flex; /* Menggunakan flexbox untuk menyusun elemen di dalamnya */
-  align-items: center; /* Vertikal: Posisi elemen di tengah 
-                          Pilihan lain: 
-                          - flex-start: Elemen di atas
-                          - flex-end: Elemen di bawah */
-  justify-content: center; /* Horizontal: Posisi elemen di tengah 
-                              Pilihan lain: 
-                              - flex-start: Elemen ke kiri
-                              - flex-end: Elemen ke kanan 
-                              - space-between: Jarak antar elemen merata */
-  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2); /* Menambahkan efek bayangan */
+  display: flex; /* Menggunakan flexbox untuk menyusun elemen */
+  flex-direction: column; /* Menyusun elemen secara vertikal */
+  align-items: flex-start; /* Merapatkan elemen ke kiri */
+  margin: 0; /* Menghilangkan margin */
+  padding: 0; /* Menghilangkan padding */
+  width: 100%; /* Menjamin lebar header memenuhi layar */
+  background-color: #ede557; /* Warna latar belakang */
+  box-sizing: border-box; /* Memastikan padding dan border termasuk dalam ukuran */
 }
 
+/* Gaya untuk logo */
 .logo {
-  background-color: #555; /* Warna latar belakang logo */
-  color: white; /* Warna teks logo */
-  width: 100px; /* Lebar logo */
-  height: 50px; /* Tinggi logo */
-  display: flex; /* Menggunakan flexbox untuk menyusun elemen di dalamnya */
-  align-items: center; /* Vertikal: Posisi teks di tengah logo 
-                          Pilihan lain:
-                          - flex-start: Teks di atas
-                          - flex-end: Teks di bawah */
-  justify-content: center; /* Horizontal: Posisi teks di tengah logo 
-                              Pilihan lain:
-                              - flex-start: Teks di kiri
-                              - flex-end: Teks di kanan */
-  border-radius: 25px; /* Membuat sudut melengkung seperti oval 
-                          Pilihan lain:
-                          - 0px: Kotak tanpa lengkungan
-                          - 10px: Lengkungan kecil */
-  font-size: 18px; /* Ukuran teks logo */
+  background-color: #555; /* Warna latar belakang jika gambar transparan */
+  width: 100px; /* Lebar lingkaran */
+  height: 100px; /* Tinggi lingkaran */
+  display: flex; /* Menggunakan flexbox */
+  align-items: center; /* Memusatkan elemen secara vertikal */
+  justify-content: center; /* Memusatkan elemen secara horizontal */
+  border-radius: 50%; /* Membuat elemen berbentuk lingkaran */
+  overflow: hidden; /* Memastikan gambar tidak keluar dari area lingkaran */
+  margin-bottom: 10px; /* Jarak antara logo dan paragraf */
+  margin-left: 10px;
+  margin-top: 10px;
 }
+
+/* Gaya untuk gambar di dalam logo */
+.logo img {
+  width: 100%; /* Gambar memenuhi lebar lingkaran */
+  height: 100%; /* Gambar memenuhi tinggi lingkaran */
+  object-fit: cover; /* Mengatur gambar agar pas dalam lingkaran */
+}
+
+/* Gaya untuk paragraf */
+.header p {
+  font-size: 18px; /* Ukuran font paragraf */
+  color: #ffffff; /* Warna teks */
+  margin: 0; /* Menghapus margin default pada paragraf */
+  margin-left: 12px;
+}
+
+.search-container {
+  margin-top: 10px; /* Memberikan jarak antara header dan kotak pencarian */
+  width: 16%; /* Menyusun kotak pencarian memenuhi lebar header */
+}
+
+/* Styling untuk kotak pencarian */
+.search-box {
+  width: 100%; /* Membuat kotak pencarian memenuhi lebar header */
+  padding: 10px; /* Memberikan padding pada kotak pencarian */
+  border-radius: 5px; /* Membuat sudut kotak melengkung */
+  border: 1px solid #ccc; /* Memberikan border kotak pencarian */
+  box-sizing: border-box; /* Memastikan padding termasuk dalam ukuran */
+  font-size: 14px; /* Ukuran font */
+}
+
+
 
 /* Struktur Layout */
 .container {
@@ -54,7 +78,7 @@ body {
 /* Sidebar */
 .sidebar {
   width: 200px; /* Lebar sidebar */
-  background-color: #333; /* Warna latar belakang sidebar */
+  background-color: #08509e; /* Warna latar belakang sidebar */
   color: white; /* Warna teks sidebar */
   padding-top: 20px; /* Jarak isi sidebar dari atas 
                         Pilihan lain:
@@ -101,16 +125,19 @@ body {
                          Pilihan lain:
                          - left: Rata kiri
                          - right: Rata kanan */
-  background-color: #444; /* Warna background default link */
+  background-color: #08509e; /* Warna background default link */
   border-radius: 5px; /* Membuat sudut link menjadi melengkung 
                          Pilihan lain:
                          - 0px: Tidak melengkung */
 }
 
 .nav li a:hover {
-  background-color: #555; /* Mengubah warna background saat link di-hover 
+  background-color: red; /* Mengubah warna background saat link di-hover 
                              Pilihan lain:
                              - #666: Warna lebih terang */
+}
+.nav li a.red-bg {
+  background-color: red; /* Mengubah background menjadi merah */
 }
 
 /* Konten */
